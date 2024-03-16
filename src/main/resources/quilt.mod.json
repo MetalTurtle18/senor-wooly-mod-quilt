@@ -1,9 +1,9 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "${com.dekolis}",
+		"group": "com.dekolis",
 		"id": "senor_wooly",
-		"version": "${1.0.0}",
+		"version": "1.0.0",
 		"metadata": {
 			"name": "Señor Wooly Mod",
 			"description": "A mod with Señor Wooly stuff.",

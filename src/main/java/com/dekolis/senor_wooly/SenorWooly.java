@@ -1,9 +1,8 @@
 package com.dekolis.senor_wooly;
 
-import com.dekolis.senor_wooly.item.SenorWoolyItems;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import com.dekolis.senor_wooly.blocks.SenorWoolyBlocks;
+import com.dekolis.senor_wooly.items.SenorWoolyItems;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -27,11 +26,14 @@ public class SenorWooly implements ModInitializer {
                 entries.addItem(SenorWoolyItems.HEART_BACKPACK);
                 entries.addItem(SenorWoolyItems.MAGIC_YARN);
                 entries.addItem(SenorWoolyItems.SENOR_WOOLIUM);
+                entries.addItem(SenorWoolyBlocks.MAGIC_WOOL.asItem());
+                entries.addItem(SenorWoolyBlocks.SENOR_WOOLIUM_ORE.asItem());
             })
             .build();
 
     @Override
     public void onInitialize(ModContainer mod) {
+        SenorWoolyBlocks.register(mod.metadata().id());
         SenorWoolyItems.register(mod.metadata().id());
 
         Registry.register(Registries.ITEM_GROUP, new Identifier(mod.metadata().id(), "senor_wooly_tab"), SENOR_WOOLY_TAB);

@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
@@ -17,6 +18,10 @@ public class SenorWoolyBlocks {
         Registry.register(Registries.ITEM, new Identifier(modId, "senor_woolium_ore"), new BlockItem(SENOR_WOOLIUM_ORE, new QuiltItemSettings()));
     }
 
-    public static final Block MAGIC_WOOL = new Block(QuiltBlockSettings.create());
-    public static final Block SENOR_WOOLIUM_ORE = new Block(QuiltBlockSettings.create());
+    public static final Block MAGIC_WOOL = new SenorWooliumOre(QuiltBlockSettings.create());
+    public static final Block SENOR_WOOLIUM_ORE = new Block(QuiltBlockSettings.create()
+            .strength(0.8f, 0.8f)
+            .sounds(BlockSoundGroup.WOOL)
+            .luminance(15)
+    );
 }

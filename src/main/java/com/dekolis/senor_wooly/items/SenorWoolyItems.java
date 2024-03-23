@@ -14,8 +14,8 @@ public class SenorWoolyItems {
         Registry.register(Registries.ITEM, new Identifier(modId, "senor_woolium"), SENOR_WOOLIUM);
     }
 
-    public static final Item TUBES = new Item(new QuiltItemSettings());
-    public static final Item HEART_BACKPACK = new Item(new QuiltItemSettings());
+    public static final Item TUBES = new Tubes(new QuiltItemSettings());
+    public static final Item HEART_BACKPACK = new HeartBackpack(new QuiltItemSettings());
     public static final Item MAGIC_YARN = new Item(new QuiltItemSettings());
     public static final Item SENOR_WOOLIUM = new Item(new QuiltItemSettings());
 }
